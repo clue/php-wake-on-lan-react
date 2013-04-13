@@ -1,6 +1,9 @@
 <?php
 
 use Evenement\EventEmitter;
+use React\EventLoop\LoopInterface;
+use Socket\React\Datagram\Factory as DatagramFactory;
+use \InvalidArgumentException;
 
 class Wol extends EventEmitter
 {
@@ -9,7 +12,7 @@ class Wol extends EventEmitter
     
     public function __construct(LoopInterface $loop)
     {
-        $factory = new Factory($loop);
+        $factory = new DatagramFactory($loop);
         $this->socket = $factory->createUdp4();
         $this->socket->setOptionBroadcast();
         
@@ -50,7 +53,7 @@ class Wol extends EventEmitter
      * @return string uppercase mac address with colon separators (e.g. 00:11:22:33:44:55)
      * @throws InvalidArgumentException
      */
-    private function coerceMac($mac)
+    public function coerceMac($mac)
     {
         if (strlen($mac) === 12) {
             // no separators => add colons in between
