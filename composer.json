@@ -1,0 +1,16 @@
+{
+    "require": {
+        "evenement/evenement": "1.*",
+        "clue/socket-react": "dev-master@dev",
+        "clue/socket-raw": "dev-master@dev"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/clue/socket-react"
+        }
+    ],
+    "autoload": {
+        "classmap": [""]
+    }
+}
