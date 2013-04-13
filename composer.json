@@ -12,5 +12,6 @@
     ],
     "autoload": {
         "classmap": [""]
-    }
+    },
+    "bin": ["bin/wol.php"]
 }
