@@ -1,4 +1,4 @@
-# clue/hexdump
+# clue/wol-react
 
 Turn on your PC with [Wake-On-LAN](http://en.wikipedia.org/wiki/Wake-on-LAN) (WOL) requests
 
