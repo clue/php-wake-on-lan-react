@@ -4,6 +4,12 @@
     "keywords": ["WOL", "wake on LAN"],
     "homepage": "https://github.com/clue/wol-react",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Lück",
+            "email": "christian@lueck.tv"
+        }
+    ],
     "require": {
         "evenement/evenement": "1.*",
         "clue/socket-react": "dev-master@dev"
