@@ -11,9 +11,9 @@ Once [installed](#install), using this library is as simple as running:
 
 ```php
 $loop = React\EventLoop\Factory::create();
-$wolFactory = new Clue\Wol\Factory($loop);
+$wolFactory = new Clue\React\Wol\Factory($loop);
 
-$wolFactory->createSender()->then(function(Clue\Wol\Sender $wol) {
+$wolFactory->createSender()->then(function(Clue\React\Wol\Sender $wol) {
     $wol->send('11:22:33:44:55:66');
 });
 
@@ -25,7 +25,7 @@ If your environment requires a non-default broadcast address (the default is: `2
 
 ```php
 $loop = React\EventLoop\Factory::create();
-$wolFactory = new Clue\Wol\Factory($loop);
+$wolFactory = new Clue\React\Wol\Factory($loop);
 
 $wolFactory->createSender('1.2.3.4:9')->then(function(Clue\Wol\Sender $wol) {
     $wol->send('11:22:33:44:55:66');

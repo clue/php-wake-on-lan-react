@@ -1,6 +1,6 @@
 <?php
 
-use Clue\Wol\Sender;
+use Clue\React\Wol\Sender;
 
 class SenderTest extends TestCase
 {

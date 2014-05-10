@@ -14,7 +14,7 @@
         "clue/socket-react": "0.2.*"
     },
     "autoload": {
-        "psr-4": {"Clue\\Wol\\": "src"}
+        "psr-4": {"Clue\\React\\Wol\\": "src"}
     },
     "bin": ["bin/wol.php"]
 }

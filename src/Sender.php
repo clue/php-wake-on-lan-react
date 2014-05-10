@@ -1,6 +1,6 @@
 <?php
 
-namespace Clue\Wol;
+namespace Clue\React\Wol;
 
 use Socket\React\Datagram\Socket;
 use InvalidArgumentException;

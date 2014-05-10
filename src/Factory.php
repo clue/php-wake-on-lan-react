@@ -1,6 +1,6 @@
 <?php
 
-namespace Clue\Wol;
+namespace Clue\React\Wol;
 
 use React\EventLoop\LoopInterface;
 use Socket\React\Datagram\Factory as DatagramFactory;

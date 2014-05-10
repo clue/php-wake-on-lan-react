@@ -11,6 +11,7 @@ you spot any mistakes.
   ([#2](https://github.com/clue/socket-raw/pull/2) @WyriHaximus)
 * Use stable/tagged dependencies
   ([#2](https://github.com/clue/socket-raw/pull/2))
+* Use `Clue\React\Wol` namespace and PSR-4 code layout
 * Extended test suite with 100% coverage and continuos integration by Travis CI
 
 ## 0.0.0 (2013-04-13)

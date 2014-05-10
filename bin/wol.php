@@ -4,10 +4,10 @@
 (@include_once __DIR__ . '/../vendor/autoload.php') or (print('ERROR: Installation incomplete, please see README' . PHP_EOL) and exit(1));
 
 $loop = new Socket\React\EventLoop\SocketSelectLoop();
-$wolFactory = new Clue\Wol\Factory($loop);
+$wolFactory = new Clue\React\Wol\Factory($loop);
 
-$do = function ($mac, $address = Clue\Wol\Factory::DEFAULT_ADDRESS) use ($loop, $wolFactory) {
-    $wolFactory->createSender($address)->then(function(Clue\Wol\Sender $wol) use($mac) {
+$do = function ($mac, $address = Clue\React\Wol\Factory::DEFAULT_ADDRESS) use ($loop, $wolFactory) {
+    $wolFactory->createSender($address)->then(function(Clue\React\Wol\Sender $wol) use($mac) {
         $wol->send($mac);
         echo 'Sending magic wake on lan (WOL) packet to ' . $mac . PHP_EOL;
     })->then(null, function (Exception $error) {

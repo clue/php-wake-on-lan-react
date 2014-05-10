@@ -1,7 +1,7 @@
 <?php
 
-use Clue\Wol\Factory;
-use Clue\Wol\Sender;
+use Clue\React\Wol\Factory;
+use Clue\React\Wol\Sender;
 
 class FactoryTest extends TestCase
 {
