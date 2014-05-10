@@ -2,8 +2,7 @@
 
 Turn on your PC with [Wake-On-LAN](http://en.wikipedia.org/wiki/Wake-on-LAN) (WOL) requests
 
-> WARNING: This is a pre-alpha version and there's a fair chance for it to not
-work at all in your environment!
+> Note: This project is in beta stage! Feel free to report any issues you encounter.
 
 ## Usage
 
@@ -75,7 +74,7 @@ The recommended way to install this library is [through composer](http://getcomp
 ```JSON
 {
     "require": {
-        "clue/wol-react": "dev-master"
+        "clue/wol-react": "0.1.*"
     }
 }
 ```
