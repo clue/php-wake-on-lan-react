@@ -8,28 +8,20 @@ $wolFactory = new Clue\Wol\Factory($loop);
 
 $do = function ($mac, $address = Clue\Wol\Factory::DEFAULT_ADDRESS) use ($loop, $wolFactory) {
     $wolFactory->createSender($address)->then(function(Clue\Wol\Sender $wol) use($mac) {
-        try {
-            $wol->send($mac);
-        }
-        catch (InvalidArgumentException $e) {
-            echo 'ERROR: invalid mac given' . PHP_EOL;
-            return false;
-        }
+        $wol->send($mac);
         echo 'Sending magic wake on lan (WOL) packet to ' . $mac . PHP_EOL;
+    })->then(null, function (Exception $error) {
+        echo 'Error: ' . $error->getMessage() . PHP_EOL;
+        exit(1);
     });
-    return true;
 };
 
 $prompt = '> ';
 
 if ($_SERVER['argc'] > 2) {
-    if (!$do($_SERVER['argv'][1], $_SERVER['argv'][2])) {
-        exit(1);
-    }
+    $do($_SERVER['argv'][1], $_SERVER['argv'][2]);
 } else if ($_SERVER['argc'] > 1) {
-    if (!$do($_SERVER['argv'][1])) {
-        exit(1);
-    }
+    $do($_SERVER['argv'][1]);
 } else {
     echo 'No target MAC address given as argument, reading from STDIN: ' . PHP_EOL . $prompt;
 
