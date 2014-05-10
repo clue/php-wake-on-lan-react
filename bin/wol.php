@@ -1,16 +1,15 @@
 #!/usr/bin/env php
 <?php
 
-(@include_once __DIR__.'/../vendor/autoload.php') OR (print('ERROR: Installation incomplete, please see README' . PHP_EOL) AND exit(1));
+(@include_once __DIR__ . '/../vendor/autoload.php') or (print('ERROR: Installation incomplete, please see README' . PHP_EOL) and exit(1));
 
 $loop = React\EventLoop\Factory::create();
 
-$wol = new Wol($loop);
-$do = function($mac) use ($loop, $wol){
+$wol = new Clue\Wol\Sender($loop);
+$do = function ($mac) use ($loop, $wol) {
     try {
         $mac = $wol->coerceMac($mac);
-    }
-    catch (InvalidArgumentException $e) {
+    } catch (InvalidArgumentException $e) {
         echo 'ERROR: invalid mac given' . PHP_EOL;
         return false;
     }
@@ -27,8 +26,8 @@ if ($_SERVER['argc'] > 1) {
     }
 } else {
     echo 'No target MAC address given as argument, reading from STDIN: ' . PHP_EOL . $prompt;
-    
-    $loop->addReadStream(STDIN, function() use ($wol, $loop, $do, $prompt) {
+
+    $loop->addReadStream(STDIN, function () use ($wol, $loop, $do, $prompt) {
         $line = fread(STDIN, 8192);
         if ($line === '') {
             // EOF: CRTL+D
@@ -41,7 +40,7 @@ if ($_SERVER['argc'] > 1) {
                 echo $prompt;
                 return;
             }
-            
+
             $do($line);
             echo $prompt;
         }
