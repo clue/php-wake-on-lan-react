@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "3b22715f8e910040707e371b09598e45",
+    "hash": "0d1913aa48be4402c827478bdec2fe51",
     "packages": [
         {
             "name": "clue/datagram",
-            "version": "v0.2.0",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/clue/datagram.git",
-                "reference": "v0.2.0"
+                "reference": "726b8ea3c5259ec61d580944c6f37ad3559dac3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clue/datagram/zipball/v0.2.0",
-                "reference": "v0.2.0",
+                "url": "https://api.github.com/repos/clue/datagram/zipball/726b8ea3c5259ec61d580944c6f37ad3559dac3c",
+                "reference": "726b8ea3c5259ec61d580944c6f37ad3559dac3c",
                 "shasum": ""
             },
             "require": {
@@ -46,20 +46,20 @@
                 "server",
                 "udp"
             ],
-            "time": "2013-04-16 10:35:01"
+            "time": "2014-03-03 23:29:41"
         },
         {
             "name": "clue/socket-raw",
-            "version": "v0.1.2",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/clue/socket-raw.git",
-                "reference": "v0.1.2"
+                "reference": "3224fac098e7b49a6de07355e8622a4373dd6a4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clue/socket-raw/zipball/v0.1.2",
-                "reference": "v0.1.2",
+                "url": "https://api.github.com/repos/clue/socket-raw/zipball/3224fac098e7b49a6de07355e8622a4373dd6a4d",
+                "reference": "3224fac098e7b49a6de07355e8622a4373dd6a4d",
                 "shasum": ""
             },
             "require": {
@@ -68,13 +68,19 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Socket": ""
+                "psr-4": {
+                    "Socket\\Raw\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@lueck.tv"
+                }
             ],
             "description": "Simple and lightweight OOP wrapper for PHP's low level sockets extension (ext-sockets)",
             "homepage": "https://github.com/clue/socket-raw",
@@ -92,25 +98,25 @@
                 "udp",
                 "unix"
             ],
-            "time": "2013-05-09 09:16:48"
+            "time": "2014-05-10 14:11:21"
         },
         {
             "name": "clue/socket-react",
-            "version": "dev-master",
+            "version": "v0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/clue/socket-react.git",
-                "reference": "32d70358a8fc86e0268bc9119d81347328169034"
+                "reference": "30b03a057cb00b030f2c15d6898dd55b81f97622"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clue/socket-react/zipball/32d70358a8fc86e0268bc9119d81347328169034",
-                "reference": "32d70358a8fc86e0268bc9119d81347328169034",
+                "url": "https://api.github.com/repos/clue/socket-react/zipball/30b03a057cb00b030f2c15d6898dd55b81f97622",
+                "reference": "30b03a057cb00b030f2c15d6898dd55b81f97622",
                 "shasum": ""
             },
             "require": {
-                "clue/datagram": "0.2.*",
-                "clue/socket-raw": "0.1.*",
+                "clue/datagram": "0.4.*",
+                "clue/socket-raw": "1.* | 0.1.*",
                 "evenement/evenement": "1.*",
                 "react/event-loop": ">=0.2, <0.4",
                 "react/promise": "1.*",
@@ -119,30 +125,43 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Socket": ""
+                "psr-4": {
+                    "Socket\\React\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
+            "authors": [
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@lueck.tv"
+                }
+            ],
             "description": "Binding for raw sockets (ext-sockets) in reactphp",
             "homepage": "https://github.com/clue/socket-react",
-            "time": "2013-05-26 15:43:19"
+            "keywords": [
+                "async",
+                "ext-sockets",
+                "low-level",
+                "react",
+                "sockets"
+            ],
+            "time": "2014-05-10 14:50:10"
         },
         {
             "name": "evenement/evenement",
             "version": "v1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/igorw/evenement",
-                "reference": "v1.0.0"
+                "url": "https://github.com/igorw/evenement.git",
+                "reference": "fa966683e7df3e5dd5929d984a44abfbd6bafe8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/igorw/evenement/zipball/v1.0.0",
-                "reference": "v1.0.0",
+                "url": "https://api.github.com/repos/igorw/evenement/zipball/fa966683e7df3e5dd5929d984a44abfbd6bafe8d",
+                "reference": "fa966683e7df3e5dd5929d984a44abfbd6bafe8d",
                 "shasum": ""
             },
             "require": {
@@ -169,7 +188,7 @@
             "keywords": [
                 "event-dispatcher"
             ],
-            "time": "2012-05-30 08:01:08"
+            "time": "2012-05-30 15:01:08"
         },
         {
             "name": "react/cache",
@@ -178,17 +197,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/cache.git",
-                "reference": "v0.3.2"
+                "reference": "a821f4318e38fc7efd02d81698fcee9d3d34dafe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/cache/zipball/v0.3.2",
-                "reference": "v0.3.2",
+                "url": "https://api.github.com/repos/reactphp/cache/zipball/a821f4318e38fc7efd02d81698fcee9d3d34dafe",
+                "reference": "a821f4318e38fc7efd02d81698fcee9d3d34dafe",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "react/promise": ">=1.0,<2.0"
+                "react/promise": "~1.0"
             },
             "type": "library",
             "extra": {
@@ -218,18 +237,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/dns.git",
-                "reference": "v0.3.2"
+                "reference": "c8c9c57750cb24e8f7b87bc62fee10750f1f9fbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/dns/zipball/v0.3.2",
-                "reference": "v0.3.2",
+                "url": "https://api.github.com/repos/reactphp/dns/zipball/c8c9c57750cb24e8f7b87bc62fee10750f1f9fbf",
+                "reference": "c8c9c57750cb24e8f7b87bc62fee10750f1f9fbf",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "react/cache": "0.3.*",
-                "react/promise": ">=1.0,<2.0",
+                "react/promise": "~1.0",
                 "react/socket": "0.3.*"
             },
             "type": "library",
@@ -256,17 +275,17 @@
         },
         {
             "name": "react/event-loop",
-            "version": "v0.3.2",
+            "version": "v0.3.3",
             "target-dir": "React/EventLoop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/event-loop.git",
-                "reference": "v0.3.2"
+                "reference": "49208fa3a15c9eae4adf8351ee9caa4064fe550d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/v0.3.2",
-                "reference": "v0.3.2",
+                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/49208fa3a15c9eae4adf8351ee9caa4064fe550d",
+                "reference": "49208fa3a15c9eae4adf8351ee9caa4064fe550d",
                 "shasum": ""
             },
             "require": {
@@ -295,7 +314,7 @@
             "keywords": [
                 "event-loop"
             ],
-            "time": "2013-01-14 23:11:47"
+            "time": "2013-07-08 22:38:22"
         },
         {
             "name": "react/promise",
@@ -303,12 +322,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "v1.0.4"
+                "reference": "d6de8cae1dbb4878d909c41cb89aff764504472c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/v1.0.4",
-                "reference": "v1.0.4",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/d6de8cae1dbb4878d909c41cb89aff764504472c",
+                "reference": "d6de8cae1dbb4878d909c41cb89aff764504472c",
                 "shasum": ""
             },
             "require": {
@@ -347,12 +366,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/socket.git",
-                "reference": "v0.3.2"
+                "reference": "9cc32838d25a934ce950d2662cce2ff1b9e9f8aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/socket/zipball/v0.3.2",
-                "reference": "v0.3.2",
+                "url": "https://api.github.com/repos/reactphp/socket/zipball/9cc32838d25a934ce950d2662cce2ff1b9e9f8aa",
+                "reference": "9cc32838d25a934ce950d2662cce2ff1b9e9f8aa",
                 "shasum": ""
             },
             "require": {
@@ -384,17 +403,17 @@
         },
         {
             "name": "react/stream",
-            "version": "v0.3.2",
+            "version": "v0.3.3",
             "target-dir": "React/Stream",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/stream.git",
-                "reference": "v0.3.2"
+                "reference": "b72900ab00513b591fb101faecad38f9c8eab8da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/v0.3.2",
-                "reference": "v0.3.2",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/b72900ab00513b591fb101faecad38f9c8eab8da",
+                "reference": "b72900ab00513b591fb101faecad38f9c8eab8da",
                 "shasum": ""
             },
             "require": {
@@ -425,7 +444,7 @@
                 "pipe",
                 "stream"
             ],
-            "time": "2013-05-10 15:12:22"
+            "time": "2013-07-09 00:44:12"
         }
     ],
     "packages-dev": [
@@ -435,9 +454,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "clue/socket-react": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": [
 
     ],
