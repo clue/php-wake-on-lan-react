@@ -11,7 +11,6 @@
         }
     ],
     "require": {
-        "evenement/evenement": "1.*",
         "clue/socket-react": "0.2.*"
     },
     "autoload": {

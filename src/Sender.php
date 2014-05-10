@@ -2,12 +2,10 @@
 
 namespace Clue\Wol;
 
-use Evenement\EventEmitter;
-use React\EventLoop\LoopInterface;
 use Socket\React\Datagram\Socket;
 use InvalidArgumentException;
 
-class Sender extends EventEmitter
+class Sender
 {
     private $socket;
 
