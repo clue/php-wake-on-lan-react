@@ -1,11 +1,13 @@
 <?php
 
+namespace Clue\Wol;
+
 use Evenement\EventEmitter;
 use React\EventLoop\LoopInterface;
 use Socket\React\Datagram\Factory as DatagramFactory;
 use InvalidArgumentException;
 
-class Wol extends EventEmitter
+class Sender extends EventEmitter
 {
     private $socket;
     private $address = '255.255.255.255:7';

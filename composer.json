@@ -15,7 +15,7 @@
         "clue/socket-react": "dev-master@dev"
     },
     "autoload": {
-        "classmap": [""]
+        "psr-4": {"Clue\\Wol\\": "src"}
     },
     "bin": ["bin/wol.php"]
 }

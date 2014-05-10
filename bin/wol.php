@@ -5,7 +5,7 @@
 
 $loop = React\EventLoop\Factory::create();
 
-$wol = new Wol($loop);
+$wol = new Clue\Wol\Sender($loop);
 $do = function ($mac) use ($loop, $wol) {
     try {
         $mac = $wol->coerceMac($mac);
