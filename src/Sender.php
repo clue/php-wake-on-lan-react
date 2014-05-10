@@ -42,7 +42,7 @@ class Sender
         }
         $mac = strtoupper($mac);
 
-        if (!preg_match('/(?:[A-F0-9]{2}\:){5}[A-F0-9]{2}/', $mac)) {
+        if (!preg_match('/^(?:[A-F0-9]{2}\:){5}[A-F0-9]{2}$/', $mac)) {
             throw new InvalidArgumentException('Invalid mac address given');
         }
 
