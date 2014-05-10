@@ -3,7 +3,7 @@
 
 (@include_once __DIR__ . '/../vendor/autoload.php') or (print('ERROR: Installation incomplete, please see README' . PHP_EOL) and exit(1));
 
-$loop = React\EventLoop\Factory::create();
+$loop = new Socket\React\EventLoop\SocketSelectLoop();
 $wolFactory = new Clue\Wol\Factory($loop);
 
 $do = function ($mac, $address = Clue\Wol\Factory::DEFAULT_ADDRESS) use ($loop, $wolFactory) {
