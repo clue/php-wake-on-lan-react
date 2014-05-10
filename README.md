@@ -11,9 +11,11 @@ Once [installed](#install), using this library is as simple as running:
 
 ```php
 $loop = React\EventLoop\Factory::create();
+$wolFactory = new Clue\Wol\Factory($loop);
 
-$wol = new Clue\Wol\Sender($loop);
-$wol->send('11:22:33:44:55:66');
+$wolFactory->createSender()->then(function(Clue\Wol\Sender $wol) {
+    $wol->send('11:22:33:44:55:66');
+});
 
 $loop->run();
 ```
