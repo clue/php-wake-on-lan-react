@@ -27,7 +27,7 @@ If your environment requires a non-default broadcast address (the default is: `2
 $loop = React\EventLoop\Factory::create();
 $wolFactory = new Clue\React\Wol\Factory($loop);
 
-$wolFactory->createSender('1.2.3.4:9')->then(function(Clue\Wol\Sender $wol) {
+$wolFactory->createSender('1.2.3.4:9')->then(function(Clue\React\Wol\Sender $wol) {
     $wol->send('11:22:33:44:55:66');
 });
 
