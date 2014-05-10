@@ -20,6 +20,20 @@ $wolFactory->createSender()->then(function(Clue\Wol\Sender $wol) {
 $loop->run();
 ```
 
+If your environment requires a non-default broadcast address (the default is: `255.255.255.255:7`), for example `1.2.3.4:9`. You can pass that to the `createSender` method on the `Factory`. For example:
+
+
+```php
+$loop = React\EventLoop\Factory::create();
+$wolFactory = new Clue\Wol\Factory($loop);
+
+$wolFactory->createSender('1.2.3.4:9')->then(function(Clue\Wol\Sender $wol) {
+    $wol->send('11:22:33:44:55:66');
+});
+
+$loop->run();
+```
+
 There's also a CLI script in `bin/wol.php` to send a WOL request from the 
 command line simply by running:
 
