@@ -12,16 +12,16 @@ class Factory
 
     protected $loop;
 
-    public function __construct(LoopInterface $loop, DatagramFactory $datagramFactory = null) {
+    public function __construct(LoopInterface $loop, DatagramFactory $datagramFactory = null)
+    {
+        if ($datagramFactory === null) {
+            $datagramFactory = new DatagramFactory($loop);
+        }
         $this->loop = $loop;
         $this->datagramFactory = $datagramFactory;
-
-        if (!($this->datagramFactory instanceof DatagramFactory)) {
-            $this->datagramFactory = new DatagramFactory($this->loop);
-        }
     }
 
-    public function createWol($address = self::DEFAULT_ADDRESS)
+    public function createSender($address = self::DEFAULT_ADDRESS)
     {
         return $this->datagramFactory->createClient($address, array('broadcast' => true))->then(function (Socket $socket) {
             return new Sender($socket);
