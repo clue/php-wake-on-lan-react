@@ -16,10 +16,6 @@ class Wol extends EventEmitter
         $this->socket = $factory->createUdp4();
         $this->socket->setOptionBroadcast();
 
-        $this->socket->on('message', array(
-            $this,
-            'handleMessage'
-        ));
         $this->socket->pause();
     }
 
@@ -30,24 +26,6 @@ class Wol extends EventEmitter
         $message = "\xFF\xFF\xFF\xFF\xFF\xFF" . str_repeat($this->formatMac($mac), 16);
 
         $this->socket->send($message, $this->address);
-    }
-
-    public function handleMessage($message, $remote)
-    {
-        var_dump('received', $message, 'from', $remote);
-
-        // $mac = $this->parseMessage($message);
-        // $this->emit('message', array($mac, $message));
-    }
-
-    public function pause()
-    {
-        $this->socket->pause();
-    }
-
-    public function resume()
-    {
-        $this->socket->resume();
     }
 
     /**
