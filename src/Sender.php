@@ -2,22 +2,16 @@
 
 namespace Clue\Wol;
 
-use Evenement\EventEmitter;
-use React\EventLoop\LoopInterface;
-use Socket\React\Datagram\Factory as DatagramFactory;
+use Socket\React\Datagram\Socket;
 use InvalidArgumentException;
 
-class Sender extends EventEmitter
+class Sender
 {
     private $socket;
-    private $address = '255.255.255.255:7';
 
-    public function __construct(LoopInterface $loop)
+    public function __construct(Socket $socket)
     {
-        $factory = new DatagramFactory($loop);
-        $this->socket = $factory->createUdp4();
-        $this->socket->setOptionBroadcast();
-
+        $this->socket = $socket;
         $this->socket->pause();
     }
 
@@ -27,7 +21,7 @@ class Sender extends EventEmitter
 
         $message = "\xFF\xFF\xFF\xFF\xFF\xFF" . str_repeat($this->formatMac($mac), 16);
 
-        $this->socket->send($message, $this->address);
+        $this->socket->send($message);
     }
 
     /**
