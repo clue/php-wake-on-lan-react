@@ -1,8 +1,8 @@
 {
     "name": "clue/wol-react",
     "description": "Turn on your PC with Wake-On-LAN (WOL) requests",
-    "keywords": ["WOL", "wake on LAN"],
-    "homepage": "https://github.com/clue/wol-reactphp",
+    "keywords": ["WOL", "wake on LAN", "ReactPHP", "async"],
+    "homepage": "https://github.com/clue/reactphp-wake-on-lan",
     "license": "MIT",
     "authors": [
         {
