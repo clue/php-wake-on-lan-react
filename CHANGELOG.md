@@ -8,9 +8,9 @@ you spot any mistakes.
 
 * First tagged release
 * Refactor construction to support custom broadcast addresses
-  ([#2](https://github.com/clue/socket-raw/pull/2) @WyriHaximus)
+  ([#2](https://github.com/clue/reactphp-wake-on-lan/pull/2) @WyriHaximus)
 * Use stable/tagged dependencies
-  ([#2](https://github.com/clue/socket-raw/pull/2))
+  ([#2](https://github.com/clue/reactphp-wake-on-lan/pull/2))
 * Use `Clue\React\Wol` namespace and PSR-4 code layout
 * Extended test suite with 100% coverage and continuos integration by Travis CI
 
