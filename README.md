@@ -1,4 +1,4 @@
-# clue/wol-react [![Build Status](https://travis-ci.org/clue/reactphp-wake-on-lan.svg?branch=master)](https://travis-ci.org/clue/reactphp-wake-on-lab)
+# clue/wol-react [![Build Status](https://travis-ci.org/clue/php-wake-on-lan-react.svg?branch=master)](https://travis-ci.org/clue/php-wake-on-lan-react)
 
 Turn on your PC with [Wake-On-LAN](http://en.wikipedia.org/wiki/Wake-on-LAN) (WOL) requests
 
